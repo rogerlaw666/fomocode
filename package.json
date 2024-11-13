@@ -1,13 +1,13 @@
 {
-    "name": "sower-tools",
-    "displayName": "Sower Tools",
+    "name": "fomocode",
+    "displayName": "Fomocode",
     "description": "A collection of commonly used tools for VSCode.",
     "version": "0.12.12",
-    "publisher": "Sower",
+    "publisher": "Fomocode",
     "icon": "./assets/icon.png",
     "repository": {
         "type": "git",
-        "url": "http://gitea.sower.fun/vsc-extensions/sower-tools.git"
+        "url": "https://github.com/rogerlaw666/fomocode.git"
     },
     "license": "MIT",
     "engines": {
@@ -23,15 +23,15 @@
     "contributes": {
         "commands": [
             {
-                "command": "sower-tools.databaseModel.generateModel",
+                "command": "fomocode.databaseModel.generateModel",
                 "title": "Generate Model"
             },
             {
-                "command": "sower-tools.databaseModel.updateModel",
+                "command": "fomocode.databaseModel.updateModel",
                 "title": "Update Model"
             },
             {
-                "command": "sower-tools.debuggingEnhancement.debugProject",
+                "command": "fomocode.debuggingEnhancement.debugProject",
                 "title": "Debug Project",
                 "icon": {
                     "dark": "./assets/debugProject-dark.svg",
@@ -39,7 +39,7 @@
                 }
             },
             {
-                "command": "sower-tools.debuggingEnhancement.debugCurrentFile",
+                "command": "fomocode.debuggingEnhancement.debugCurrentFile",
                 "title": "Debug Current File",
                 "icon": {
                     "dark": "./assets/debugCurrentFile-dark.svg",
@@ -47,192 +47,192 @@
                 }
             },
             {
-                "command": "sower-tools.functionEnhancement.convertParametersToOptionsObject",
+                "command": "fomocode.functionEnhancement.convertParametersToOptionsObject",
                 "title": "Convert Parameters to Options Object"
             },
             {
-                "command": "sower-tools.functionEnhancement.updateTypeMemberNames",
+                "command": "fomocode.functionEnhancement.updateTypeMemberNames",
                 "title": "Update Type Member Names"
             },
             {
-                "command": "sower-tools.generateEnumAssertionFunction",
+                "command": "fomocode.generateEnumAssertionFunction",
                 "title": "Generate/Update Enum Assertion"
             },
             {
-                "command": "sower-tools.generateTypeSchema",
+                "command": "fomocode.generateTypeSchema",
                 "title": "Generate Type of Schema"
             },
             {
-                "command": "sower-tools.gitEnhancement.skipWorkTree",
+                "command": "fomocode.gitEnhancement.skipWorkTree",
                 "title": "Skip Work Tree"
             },
             {
-                "command": "sower-tools.gitEnhancement.noSkipWorkTree",
+                "command": "fomocode.gitEnhancement.noSkipWorkTree",
                 "title": "No Skip Work Tree"
             },
             {
-                "command": "sower-tools.gitEnhancement.listFiles",
+                "command": "fomocode.gitEnhancement.listFiles",
                 "title": "List Files"
             },
             {
-                "command": "sower-tools.timestampTool.covertTimestamp",
+                "command": "fomocode.timestampTool.covertTimestamp",
                 "title": "Convert Timestamp"
             },
             {
-                "command": "sower-tools.timestampTool.insertTimestamp",
+                "command": "fomocode.timestampTool.insertTimestamp",
                 "title": "Insert Timestamp"
             },
             {
-                "command": "sower-tools.stringTools.base64Encode",
+                "command": "fomocode.stringTools.base64Encode",
                 "title": "Base64 Encode"
             },
             {
-                "command": "sower-tools.stringTools.base64Decode",
+                "command": "fomocode.stringTools.base64Decode",
                 "title": "Base64 Decode"
             },
             {
-                "command": "sower-tools.syncChangelog",
+                "command": "fomocode.syncChangelog",
                 "title": "Sync Changelog"
             },
             {
-                "command": "sower-tools.sortEnums",
+                "command": "fomocode.sortEnums",
                 "title": "Sort Enums"
             }
         ],
         "submenus": [
             {
-                "id": "editor/context/sowerTools",
-                "label": "Sower Tools"
+                "id": "editor/context/fomocode",
+                "label": "Fomocode"
             },
             {
-                "id": "explorer/context/sowerTools",
-                "label": "Sower Tools"
+                "id": "explorer/context/fomocode",
+                "label": "Fomocode"
             }
         ],
         "menus": {
             "editor/context": [
                 {
-                    "group": "001_sowerTools@001",
-                    "submenu": "editor/context/sowerTools"
+                    "group": "001_fomocode@001",
+                    "submenu": "editor/context/fomocode"
                 }
             ],
-            "editor/context/sowerTools": [
+            "editor/context/fomocode": [
                 {
-                    "command": "sower-tools.debuggingEnhancement.debugCurrentFile",
+                    "command": "fomocode.debuggingEnhancement.debugCurrentFile",
                     "group": "001_debuggingEnhancement@001",
                     "when": "resourceLangId == typescript"
                 },
                 {
-                    "command": "sower-tools.debuggingEnhancement.debugProject",
+                    "command": "fomocode.debuggingEnhancement.debugProject",
                     "group": "001_debuggingEnhancement@002",
                     "when": "resourceLangId == typescript"
                 },
                 {
-                    "command": "sower-tools.databaseModel.generateModel",
+                    "command": "fomocode.databaseModel.generateModel",
                     "group": "002_databaseModel@001",
                     "when": "editorTextFocus && editorHasSelection"
                 },
                 {
-                    "command": "sower-tools.databaseModel.updateModel",
+                    "command": "fomocode.databaseModel.updateModel",
                     "group": "002_databaseModel@002",
                     "when": "resourceLangId == typescript && editorTextFocus  && !editorHasSelection"
                 },
                 {
-                    "command": "sower-tools.functionEnhancement.convertParametersToOptionsObject",
+                    "command": "fomocode.functionEnhancement.convertParametersToOptionsObject",
                     "group": "003_functionEnhancement@001",
                     "when": "resourceLangId == typescript && editorTextFocus && !editorHasSelection"
                 },
                 {
-                    "command": "sower-tools.functionEnhancement.updateTypeMemberNames",
+                    "command": "fomocode.functionEnhancement.updateTypeMemberNames",
                     "group": "003_functionEnhancement@002",
                     "when": "resourceLangId == typescript && editorTextFocus"
                 },
                 {
-                    "command": "sower-tools.generateEnumAssertionFunction",
+                    "command": "fomocode.generateEnumAssertionFunction",
                     "group": "003_functionEnhancement@003",
                     "when": "resourceLangId == typescript && editorTextFocus && !editorHasSelection"
                 },
                 {
-                    "command": "sower-tools.generateTypeSchema",
+                    "command": "fomocode.generateTypeSchema",
                     "group": "003_functionEnhancement@004",
                     "when": "resourceLangId == typescript && editorTextFocus && !editorHasSelection"
                 },
                 {
-                    "command": "sower-tools.timestampTool.covertTimestamp",
+                    "command": "fomocode.timestampTool.covertTimestamp",
                     "group": "004_timestampTool@001",
                     "when": "editorTextFocus && editorHasSelection"
                 },
                 {
-                    "command": "sower-tools.timestampTool.insertTimestamp",
+                    "command": "fomocode.timestampTool.insertTimestamp",
                     "group": "004_timestampTool@002",
                     "when": "editorTextFocus && !editorHasSelection"
                 },
                 {
-                    "command": "sower-tools.stringTools.base64Encode",
+                    "command": "fomocode.stringTools.base64Encode",
                     "group": "005_stringTools@001",
                     "when": "editorTextFocus && editorHasSelection"
                 },
                 {
-                    "command": "sower-tools.stringTools.base64Decode",
+                    "command": "fomocode.stringTools.base64Decode",
                     "group": "005_stringTools@002",
                     "when": "editorTextFocus && editorHasSelection"
                 },
                 {
-                    "command": "sower-tools.syncChangelog",
+                    "command": "fomocode.syncChangelog",
                     "group": "006_changelog@001",
                     "when": "resourceLangId == markdown && editorTextFocus"
                 },
                 {
-                    "command": "sower-tools.sortEnums",
+                    "command": "fomocode.sortEnums",
                     "group": "007_sortEnums@001",
                     "when": "resourceLangId == typescript && editorTextFocus"
                 }
             ],
             "editor/title": [
                 {
-                    "command": "sower-tools.debuggingEnhancement.debugCurrentFile",
+                    "command": "fomocode.debuggingEnhancement.debugCurrentFile",
                     "group": "navigation@001",
                     "when": "resourceLangId == typescript"
                 },
                 {
-                    "command": "sower-tools.debuggingEnhancement.debugProject",
+                    "command": "fomocode.debuggingEnhancement.debugProject",
                     "group": "navigation@002",
                     "when": "resourceLangId == typescript"
                 }
             ],
             "explorer/context": [
                 {
-                    "group": "001_sowerTools@001",
-                    "submenu": "explorer/context/sowerTools"
+                    "group": "001_fomocode@001",
+                    "submenu": "explorer/context/fomocode"
                 }
             ],
-            "explorer/context/sowerTools": [
+            "explorer/context/fomocode": [
                 {
-                    "command": "sower-tools.gitEnhancement.skipWorkTree",
+                    "command": "fomocode.gitEnhancement.skipWorkTree",
                     "group": "001_gitEnhancement@001",
                     "when": "explorerResourceIsFolder == false && resourceLangId != ''"
                 },
                 {
-                    "command": "sower-tools.gitEnhancement.noSkipWorkTree",
+                    "command": "fomocode.gitEnhancement.noSkipWorkTree",
                     "group": "001_gitEnhancement@002",
                     "when": "explorerResourceIsFolder == false && resourceLangId != ''"
                 },
                 {
-                    "command": "sower-tools.gitEnhancement.listFiles",
+                    "command": "fomocode.gitEnhancement.listFiles",
                     "group": "001_gitEnhancement@003"
                 }
             ]
         },
         "configuration": {
             "type": "object",
-            "title": "Sower Tools",
+            "title": "Fomocode",
             "properties": {
-                "sower-tools.databaseModel.enableOverwriteFile": {
+                "fomocode.databaseModel.enableOverwriteFile": {
                     "description": "If true, it will replace file content with new generated text.",
                     "type": "boolean",
                     "default": false
                 },
-                "sower-tools.databaseModel.specialUpperCaseWordsMapping": {
+                "fomocode.databaseModel.specialUpperCaseWordsMapping": {
                     "description": "Special words pairs which will be mapped automatically when to uppercase, format: <originalWord>:<mappedWord>.",
                     "type": "array",
                     "items": {
@@ -242,7 +242,7 @@
                         "Id:ID"
                     ]
                 },
-                "sower-tools.databaseModel.ignoredInsertionColumns": {
+                "fomocode.databaseModel.ignoredInsertionColumns": {
                     "description": "Special column names which will be ignored when inserting record.",
                     "type": "array",
                     "items": {
@@ -253,7 +253,7 @@
                         "updatedAt"
                     ]
                 },
-                "sower-tools.debuggingEnhancement.debugProjectConfigurationNames": {
+                "fomocode.debuggingEnhancement.debugProjectConfigurationNames": {
                     "description": "Configuration names of debugging the current opened project. The priority depends on the array element order, location is <projectRootDir>/.vscode/launch.json.",
                     "type": "array",
                     "items": {
@@ -263,7 +263,7 @@
                         "Debug Project"
                     ]
                 },
-                "sower-tools.debuggingEnhancement.debugCurrentFileConfigurationNames": {
+                "fomocode.debuggingEnhancement.debugCurrentFileConfigurationNames": {
                     "description": "Configuration names of debugging the current opened file. The priority depends on the array element order, location is <projectRootDir>/.vscode/launch.json.",
                     "type": "array",
                     "items": {
@@ -273,12 +273,12 @@
                         "Current TS File"
                     ]
                 },
-                "sower-tools.showDefaultOpenedDocument.enable": {
+                "fomocode.showDefaultOpenedDocument.enable": {
                     "description": "If true, it will show default opened document when open workspace.",
                     "type": "boolean",
                     "default": true
                 },
-                "sower-tools.showDefaultOpenedDocument.documentNames": {
+                "fomocode.showDefaultOpenedDocument.documentNames": {
                     "description": "Default opened filenames, priority is by the order you placed in this array, configurations usually are  description or specification file of your project.",
                     "type": "array",
                     "items": {
@@ -291,7 +291,7 @@
                         "changelog.md"
                     ]
                 },
-                "sower-tools.updateImports.nodeBuiltinModules": {
+                "fomocode.updateImports.nodeBuiltinModules": {
                     "description": "Node builtin module names.",
                     "type": "array",
                     "items": {
@@ -339,17 +339,17 @@
                         "zlib"
                     ]
                 },
-                "sower-tools.updateImports.enableUpdateNodeBuiltinImports": {
+                "fomocode.updateImports.enableUpdateNodeBuiltinImports": {
                     "description": "If true, it will update node builtin imports with prefix \"node:\" automatically when saving file.",
                     "type": "boolean",
                     "default": true
                 },
-                "sower-tools.stringTools.enableReplaceText": {
+                "fomocode.stringTools.enableReplaceText": {
                     "description": "If true, it will replace the selected text with converted text when encoding/decoding base64 string, otherwise it will insert the converted text after next line.",
                     "type": "boolean",
                     "default": true
                 },
-                "sower-tools.showNowTimestamp.enable": {
+                "fomocode.showNowTimestamp.enable": {
                     "description": "If true, it will show current timestamp in status bar.",
                     "type": "boolean",
                     "default": false
@@ -397,8 +397,5 @@
         "remark-parse": "^11.0.0",
         "unist-util-visit": "^5.0.0"
     },
-    "extensionDependencies": [
-        "shd101wyy.markdown-preview-enhanced",
-        "mike-co.import-sorter"
-    ]
+    "packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610"
 }
