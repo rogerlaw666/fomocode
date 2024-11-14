@@ -42,6 +42,16 @@ type TInsertOptions = {
 async function insert(dbc: DatabaseConnection, options: TInsertOptions) {
     const columnValues: TColumnValue[] = [];
 
+    columnValues.push({
+        column: EColumn.CreatedAt,
+        value: new Date(),
+    });
+
+    columnValues.push({
+        column: EColumn.UpdatedAt,
+        value: new Date(),
+    });
+
     {{insertContent}}
 
     const { preparedStmt, vars } = generateCreateStatement(
@@ -55,7 +65,7 @@ async function insert(dbc: DatabaseConnection, options: TInsertOptions) {
 }
 
 type TUpdateOptions = Partial<{
-
+    {{TUpdateOptionsContent}}
 }>;
 
 async function update(
@@ -69,6 +79,8 @@ async function update(
         column: EColumn.UpdatedAt,
         value: new Date(),
     });
+
+    {{updateContent}}
 
     const { preparedStmt, vars } = generateUpdateStatement(
         kFullQualifiedTableName,
