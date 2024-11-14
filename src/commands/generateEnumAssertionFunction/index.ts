@@ -184,7 +184,9 @@ async function generateEnumAssertionFunction({
         });
     }
 
-    await TextEditorUtils.replaceAllTextOfNode({
+    await vscode.workspace.save(editor.document.uri);
+
+    await TextEditorUtils.replaceTextOfSourceFile({
         editor,
         sourceFile: getSourceFileByEditor(editor),
         newText: await prettierFormatFile(
