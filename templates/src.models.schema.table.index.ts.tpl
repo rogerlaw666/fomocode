@@ -42,16 +42,6 @@ type TInsertOptions = {
 async function insert(dbc: DatabaseConnection, options: TInsertOptions) {
     const columnValues: TColumnValue[] = [];
 
-    columnValues.push({
-        column: EColumn.CreatedAt,
-        value: new Date(),
-    });
-
-    columnValues.push({
-        column: EColumn.UpdatedAt,
-        value: new Date(),
-    });
-
     {{insertContent}}
 
     const { preparedStmt, vars } = generateCreateStatement(
